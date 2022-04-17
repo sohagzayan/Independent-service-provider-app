@@ -168,7 +168,7 @@ body {
   filter: blur(70px);
 }
 .heroImage {
-  position: relativex;
+  position: relative;
 }
 .heroImage::after {
   content: "";

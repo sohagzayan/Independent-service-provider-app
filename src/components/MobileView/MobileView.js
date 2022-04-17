@@ -17,9 +17,9 @@ const MobileView = ({showMenu , setShowMenu}) => {
         </span>
         <div className='flex-col '>
         <ul className='flex flex-col items-center  gap-8 uppercase tracking-widest font-bold text-md mr-5'>
-            <li> <NavLink to="/">About Mes</NavLink></li>
-            <li> <NavLink to="/">Checkout </NavLink></li>
-            <li> <NavLink to="/">Blog </NavLink></li>
+            <li> <NavLink to="/">Home</NavLink></li>
+            <li> <NavLink to="/about">About Mes</NavLink></li>
+            <li> <NavLink to="/blog">Blog</NavLink></li>
         </ul>
         <div className='text-center mt-5'>
             <NavLink to="/register/login" className='border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2'>Login</NavLink>
