@@ -48,7 +48,8 @@ body {
   filter: grayscale(100%) blur(1.5px);
   transition: 0.3s linear;
 }
-.cardImage:hover {
+
+.card:hover .cardImage {
   filter: grayscale(0%);
 }
 
@@ -71,4 +72,82 @@ body {
 }
 .footer:hover:before {
   width: 200%;
+}
+.footer::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #0cc486;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: -1;
+  filter: blur(90px);
+}
+
+/* .login {
+  width: 400px;
+  background-color: black;
+  padding: 20px;
+} */
+
+.res-nav {
+  position: relative;
+  padding: 8px 4px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 2px;
+  transition: 0.3s linear;
+}
+.res-nav::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: gainsboro;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s linear;
+}
+
+.res-nav.active::after {
+  background-color: #0cc486;
+  transition: 0.3s linear;
+}
+.res-nav.active {
+  color: #0cc486;
+  transition: 0.3s linear;
+}
+
+.heroImage {
+  position: relative;
+}
+.heroImage::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: #2e64d8;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: -1;
+  filter: blur(70px);
+}
+
+.content {
+  position: relative;
+}
+
+.content::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: #2e64d8;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: -1;
+  filter: blur(99px);
+  opacity: 0.8;
 }

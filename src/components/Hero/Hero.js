@@ -5,7 +5,7 @@ const Hero = () => {
         
         <div className='flex md:flex-row flex-col px-3 hero py-5 items-center justify-around'>
             
-           <div className=''>
+           <div className='content'>
            <div className=' mb-6 inline-block bg-green_light px-4 py-3  rounded-3xl'>
                 <span className='bg-dark_gray px-3 py-2   md:mr-3 mr-1 uppercase tracking-wider rounded-3xl text-xs sm:text-sm'>The best</span>
                 <span className='fod-bold tracking-widest text-xs  sm:text-sm uppercase '>Fitness club in the town</span>
@@ -32,7 +32,7 @@ const Hero = () => {
             </div>
            </div>
 
-            <div className=' mt-10 md:mt-0'>
+            <div className='heroImage mt-10 md:mt-0'>
                 <img width={300} src={image} alt="images" />
             </div>
    

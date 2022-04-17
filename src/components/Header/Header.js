@@ -6,39 +6,43 @@ import MobileView from "../MobileView/MobileView";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-
+  console.log();
   return (
     <div className="flex justify-between container mx-auto py-6 px-4">
-      <div className="flex items-center">
+      <NavLink to="/" className="flex items-center">
         <span className="mr-3 text-3xl">
           <SiConsul className="text-blue_light" />
         </span>
         <h3 className="text-2xl tracking-widest text-white_light font-bold">
           Phase
         </h3>
-      </div>
+      </NavLink>
       <div className="hidden md:block">
         <div className="flex items-center ">
           <ul className="flex items-center gap-8 uppercase tracking-widest font-bold text-md mr-5">
             <li>
               
-              <NavLink to="/">About</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               
-              <NavLink to="/">Checkout </NavLink>
+              <NavLink to="/">About Me</NavLink>
             </li>
+            {/* <li>
+              
+              <NavLink to="/">Checkout </NavLink>
+            </li> */}
             <li>
               
               <NavLink to="/">Blog </NavLink>
             </li>
           </ul>
           <div className="">
-            <button className="border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-1">
+            <NavLink to="/register/login" className="border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2">
               Login
-            </button>
-            <span className="bg-blue_light hover:border-2 duration-100 hover:border-blue_light border-2 cursor-pointer border-transparent hover:bg-transparent text-white px-3 py-2 rounded-md fond-bold tracking-wider">
-              User Name
+            </NavLink>
+            <span className="bg-blue_light  duration-100    text-white px-3 py-3 rounded-md fond-bold tracking-wider">
+              You Not User Yet
             </span>
           </div>
         </div>
