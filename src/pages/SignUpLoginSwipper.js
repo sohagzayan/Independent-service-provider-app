@@ -6,7 +6,7 @@ const LoginSignUpSwicer = () => {
     return (
         <>
           <Header />
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen px-4 ">
         <div className="p-4 rounded-lg shadow-xl shadow-primary_black " style={{width : '400px' , background : '#2E3138'}}>
           <div className="flex justify-around mb-5 text-white font-bold tracking-wider">
             <NavLink className={({isActive})=> isActive ? "res-nav active" : "res-nav"} to="login">Login</NavLink>

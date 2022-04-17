@@ -26,7 +26,7 @@ const Header = () => {
             </li>
             <li>
               
-              <NavLink to="/">About Me</NavLink>
+              <NavLink to="/about">About Me</NavLink>
             </li>
             {/* <li>
               

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import GoogleButton from 'react-google-button';
-import { TiSocialFacebook } from 'react-icons/ti';
 import { NavLink } from 'react-router-dom';
 
 const Login = () => {
@@ -90,19 +89,13 @@ const Login = () => {
           </button>
           <p className="text-center my-2 text-white text-sm">Or login with</p>
         </form>
-        <div className="flex justify-between my-4">
-          <button
-            style={{ background: "#1294F0" }}
-            className="flex text-lg rounded-md cursor-pointer items-center px-3  text-white font-medium"
-          >
-            <TiSocialFacebook className="text-3xl" />
-            Facebook
-          </button>
+        <div className="my-4 ">
           <GoogleButton
             onClick={handleGoogleSignIn}
             label="Google"
-            className="font-semibold"
-            style={{ width: "150px" }}
+            className=""
+            style={{width : '100%', textAlign : 'center'}}
+            
           />
         </div>
   
@@ -122,7 +115,7 @@ const Login = () => {
             className="text-green-400 font-bold uppercase"
             to="/register/signup"
           >
-            SignUp
+             SignUp
           </NavLink>
           
           Now
