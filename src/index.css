@@ -2,6 +2,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #222838;
+  color: white;
+}
+
+.heading {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #2e64d8;
+}
+
+.hero {
+  background-image: url(./assets/image/header-slider-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #222838, rgba(34, 40, 56, 0.473));
+  z-index: -1;
 }
