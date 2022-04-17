@@ -51,3 +51,24 @@ body {
 .cardImage:hover {
   filter: grayscale(0%);
 }
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.151);
+  padding: 40px 0;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #40c642;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+}
+.footer:hover:before {
+  width: 200%;
+}
