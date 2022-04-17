@@ -37,8 +37,17 @@ body {
 }
 
 .card {
-  border-bottom: 1px solid #ff385c;
-  border-right: 1px solid #ff385c;
+  border: 1px solid #ff385c;
   box-shadow: 10px 10px 15px rgba(255, 56, 93, 0.253);
-  padding: 10px;
+  transition: 0.3s ease-in;
+}
+.card:hover {
+  border: 1px solid #40c642;
+}
+.cardImage {
+  filter: grayscale(100%) blur(1.5px);
+  transition: 0.3s linear;
+}
+.cardImage:hover {
+  filter: grayscale(0%);
 }

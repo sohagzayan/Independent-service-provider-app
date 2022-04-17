@@ -7,8 +7,8 @@ const Hero = () => {
             
            <div className=''>
            <div className=' mb-6 inline-block bg-green_light px-4 py-3  rounded-3xl'>
-                <span className='bg-dark_gray px-3 py-2   mr-3 uppercase tracking-wider rounded-3xl text-sm'>The best</span>
-                <span className='fod-bold tracking-widest  text-sm uppercase '>Fitness club in the town</span>
+                <span className='bg-dark_gray px-3 py-2   md:mr-3 mr-1 uppercase tracking-wider rounded-3xl text-xs sm:text-sm'>The best</span>
+                <span className='fod-bold tracking-widest text-xs  sm:text-sm uppercase '>Fitness club in the town</span>
             </div>
             <h2 className=' text-5xl lg:text-7xl   uppercase leading-tight tracking-wider font-bold'><span className='heading tracking-widest'>Shape</span> your  <br /> ideal body</h2>
             <p className='text-white_light tracking-wide font-medium text-sm lg:text-md mb-5'>in here i well help you to shape and build your ideal <br /> body and live up your life to the fullest</p>

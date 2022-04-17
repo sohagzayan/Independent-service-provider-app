@@ -2,25 +2,25 @@
   {
     "name": "Kickboxing",
     "price": "50",
-    "image": "./icons/boxing-glove.png",
+    "image": "https://img.freepik.com/free-photo/young-woman-boxer-training-gym_1303-18842.jpg?t=st=1650187765~exp=1650188365~hmac=0f19a87a3b8401ed10fcedc38bd90b88ace7743202a0f6fb4ca531ab97637818&w=740",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   },
   {
     "name": "Crossfit",
     "price": "60",
-    "image": "./icons/dumbbell.png",
+    "image": "https://img.freepik.com/free-photo/shirtless-man-flipping-heavy-tire_136403-904.jpg?w=740",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   },
   {
     "name": "Cardio",
     "price": "100",
-    "image": "./icons/gym.png",
+    "image": "https://img.freepik.com/free-photo/mature-man-presses-hands-heart-has-cardio-problems-suffers-heart-attack-chest-pain-stands-with-closed-eyes-needs-doctors-help-wears-casual-jumper-isolated-brown-wall_273609-44150.jpg?t=st=1650187831~exp=1650188431~hmac=988186fc44d6e57588ddc909b0f861a6c6c89a73fa2d344d2a72a8c5772843a6&w=740",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   },
   {
     "name": "Strength",
     "price": "40",
-    "image": "./icons/workout.png",
+    "image": "https://img.freepik.com/free-photo/brutal-strong-bodybuilder-athletic-men-pumping-up-muscles-with-dumbbells_174475-671.jpg?w=740",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   }
 ]
