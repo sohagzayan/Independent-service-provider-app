@@ -35,3 +35,10 @@ body {
   background-image: linear-gradient(to right, #222838, rgba(34, 40, 56, 0.473));
   z-index: -1;
 }
+
+.card {
+  border-bottom: 1px solid #ff385c;
+  border-right: 1px solid #ff385c;
+  box-shadow: 10px 10px 15px rgba(255, 56, 93, 0.253);
+  padding: 10px;
+}

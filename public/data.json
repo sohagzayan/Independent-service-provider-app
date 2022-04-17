@@ -1,26 +1,26 @@
 [
   {
     "name": "Kickboxing",
-    "price": "70",
-    "image": "link",
+    "price": "50",
+    "image": "./icons/boxing-glove.png",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   },
   {
-    "name": "Kickboxing",
-    "price": "70",
-    "image": "link",
+    "name": "Crossfit",
+    "price": "60",
+    "image": "./icons/dumbbell.png",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   },
   {
-    "name": "Kickboxing",
-    "price": "70",
-    "image": "link",
+    "name": "Cardio",
+    "price": "100",
+    "image": "./icons/gym.png",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   },
   {
-    "name": "Kickboxing",
-    "price": "70",
-    "image": "link",
+    "name": "Strength",
+    "price": "40",
+    "image": "./icons/workout.png",
     "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
   }
 ]
