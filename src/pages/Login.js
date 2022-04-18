@@ -1,24 +1,42 @@
 import React, { useState } from 'react';
 import GoogleButton from 'react-google-button';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../context/AuthContextProvider';
 
 const Login = () => {
+    const {login , googleLogin} = useAuthContext()
     const [email ,setEmail] = useState('')
     const [password ,setPassword] = useState('')
     const [agree , setAgree] = useState(false)
     const [error , setError] = useState('')
-    const handleSubmit = ()=>{
+    const navigate = useNavigate()
 
+
+
+    const handleSubmit = async(e)=>{
+      e.preventDefault()
+      try{
+        await login(email , password)
+        navigate('/CheckOut')
+      }catch(err){
+        setError(err.message)
+        setAgree(false)
+      }
     }
 
-    const handleGoogleSignIn = ()=>{
-
+    const handleGoogleSignIn = async ()=>{
+      try{
+        await googleLogin()
+        navigate('/')
+      }catch(err){
+        setError(err.message)
+      }
     }
 
 
     return (
         <>
-      <div className='login mx-auto mt-20'>
+      <div className='login mx-auto mt-6'>
       <form className='' onSubmit={handleSubmit}>
           <p className="text-red-500 text-sm text-center font-medium">{error}</p>
           <label

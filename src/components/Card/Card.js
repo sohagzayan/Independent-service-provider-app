@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 const Card = ({item}) => {
     const {name , price , image, details} = item
     return (
@@ -13,7 +13,7 @@ const Card = ({item}) => {
                     <small className='text-xl loderSeimble text-blue_light'>$ </small>{price}
             </span>
            
-            <button className='bg-tomato_light text-white_light  checkOut block w-full px-4 py-1 rounded-md font-bold tracking-widest my-3'>CheckOut </button>
+            <NavLink to="/checkOut" className='bg-tomato_light text-center text-white_light  checkOut block w-full px-4 py-1 rounded-md font-bold tracking-widest my-3'>CheckOut </NavLink>
            </div>
         </div>
     );

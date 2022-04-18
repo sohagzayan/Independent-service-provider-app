@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { SiConsul } from "react-icons/si";
 import { NavLink } from "react-router-dom";
+import { useAuthContext } from "../../context/AuthContextProvider";
 import MobileView from "../MobileView/MobileView";
 
 const Header = () => {
+  const {username , logOut} = useAuthContext()
   const [showMenu, setShowMenu] = useState(false);
-  console.log();
+
+  const handleLogOut = async ()=>{
+    await logOut()
+  }
+
+
+
   return (
     <div className="flex justify-between container mx-auto py-6 px-4">
       <NavLink to="/" className="flex items-center">
@@ -38,11 +46,11 @@ const Header = () => {
             </li>
           </ul>
           <div className="">
-            <NavLink to="/register/login" className="border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2">
-              Login
+            <NavLink onClick={ username ? handleLogOut : null} to="/register/login" className="border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2">
+              {username ? "SignOut" : "Login"}
             </NavLink>
             <span className="bg-blue_light  duration-100    text-white px-3 py-3 rounded-md fond-bold tracking-wider">
-              You Not User Yet
+             {username ? username.displayName :  "You Not User Yet"}
             </span>
           </div>
         </div>
