@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContextProvider";
 
 const Login = () => {
-  const { sinUp, googleLogin } = useAuthContext();
+  const { sinUp, googleLogin ,varyFayEmail} = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [conformPassword, setConformPassword] = useState("");
@@ -22,6 +22,8 @@ const Login = () => {
         try {
           
           await sinUp(email, password, name);
+          varyFayEmail()
+          alert("verification mail send conform Please ! ")
           navigate("/checkOut");
         } catch (err) {
           setError(err.message);
@@ -69,6 +71,8 @@ const Login = () => {
             style={{ background: "#545E6A" }}
             type="text"
             placeholder="Name"
+            required
+
           />
           <label
             className="text-sm mb-4 text-white tracking-wider"
@@ -84,6 +88,8 @@ const Login = () => {
             style={{ background: "#545E6A" }}
             type="email"
             placeholder="Email"
+            required
+
           />
           <label
           
@@ -102,6 +108,8 @@ const Login = () => {
             style={{ background: "#545E6A" }}
             type="password"
             placeholder="Password"
+            required
+
           />
           <label
             className="text-sm mb-4 text-white tracking-wider"
@@ -119,6 +127,8 @@ const Login = () => {
             style={{ background: "#545E6A" }}
             type="password"
             placeholder="Conform password"
+            required
+
           />
           {agree ? (
             <input
@@ -128,6 +138,8 @@ const Login = () => {
               type="checkbox"
               name="checkbox"
               id="checked"
+              required
+
             />
           ) : (
             <input
@@ -136,11 +148,13 @@ const Login = () => {
               type="checkbox"
               name="checkbox"
               id="checked"
+              required
+
             />
           )}
           <label
             className={agree ? "text-green-300 text-sm" : "text-white text-sm"}
-           
+           for="checked"
           >
             Agree To Continue
           </label>

@@ -54,6 +54,8 @@ const Login = () => {
             style={{ background: "#545E6A" }}
             type="email"
             placeholder="Email"
+            required
+
           />
           <label
             className="text-sm mb-4 text-white tracking-wider"
@@ -71,6 +73,8 @@ const Login = () => {
             style={{ background: "#545E6A" }}
             type="password"
             placeholder="Password"
+            required
+
           />
           {agree ? (
             <input
@@ -80,6 +84,8 @@ const Login = () => {
               type="checkbox"
               name="checkbox"
               id="checked"
+              required
+
             />
           ) : (
             <input
@@ -88,11 +94,12 @@ const Login = () => {
               type="checkbox"
               name="checkbox"
               id="checked"
+              required
             />
           )}
           <label
             className={agree ? "text-green-300 text-sm" : "text-white text-sm"}
-            
+            for="checked"
           >
             Agree To Continue
           </label>
