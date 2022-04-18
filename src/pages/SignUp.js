@@ -17,17 +17,21 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password === conformPassword) {
-      try {
-        
-        await sinUp(email, password, name);
-        navigate("/register/login");
-      } catch (err) {
-        setError(err.message);
+    if(name){
+      if (password === conformPassword) {
+        try {
+          
+          await sinUp(email, password, name);
+          navigate("/checkOut");
+        } catch (err) {
+          setError(err.message);
+        }
+      } else {
+        setError("your password and conform Password not mach");
+        setAgree(false);
       }
-    } else {
-      setError("your password and conform Password not mach");
-      setAgree(false);
+    }else{
+      setError('Please add Your user name Must!')
     }
   };
 

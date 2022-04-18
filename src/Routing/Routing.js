@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "../pages/About";
+import Blog from "../pages/Blog";
 import CheckOut from '../pages/CheckOut';
 import ForGotPassword from "../pages/ForGotPassword";
 import Home from "../pages/Home";
@@ -14,6 +15,7 @@ const Routing = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/blog" element={<Blog />} />
       <Route path="/CheckOut" element={<PrivateRoute><CheckOut /></PrivateRoute>} />
       <Route path="/register" element={<LoginSignUpSwicer />}>
         <Route path="login" element={<Login />} />
