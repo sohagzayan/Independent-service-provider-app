@@ -57,7 +57,7 @@ const Login = () => {
           </p>
           <label
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="email"
+           
           >
             Name
           </label>
@@ -72,7 +72,7 @@ const Login = () => {
           />
           <label
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="email"
+            
           >
             Email
           </label>
@@ -88,7 +88,7 @@ const Login = () => {
           <label
           
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="password"
+           
           >
             Password
           </label>
@@ -105,7 +105,7 @@ const Login = () => {
           />
           <label
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="conformPassword"
+            
           >
             Conform password
           </label>
@@ -140,7 +140,7 @@ const Login = () => {
           )}
           <label
             className={agree ? "text-green-300 text-sm" : "text-white text-sm"}
-            htmlFor="checked"
+           
           >
             Agree To Continue
           </label>

@@ -1,26 +1,30 @@
 [
   {
+    "id": "1",
     "name": "Kickboxing",
     "price": "50",
     "image": "https://img.freepik.com/free-photo/young-woman-boxer-training-gym_1303-18842.jpg?t=st=1650187765~exp=1650188365~hmac=0f19a87a3b8401ed10fcedc38bd90b88ace7743202a0f6fb4ca531ab97637818&w=740",
-    "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
+    "details": "As a part of the Ultimate Beginner’s Guide To Kickboxing, we’re now going to show you the 6 basic punches in Boxing. While there are many more punches and there are many different variations on each type of punch, these are the 6 elemental punches you’ll need to get started in Boxing or Kickboxing"
   },
   {
-    "name": "Crossfit",
+    "id": "2",
+    "name": "CrossFit",
     "price": "60",
     "image": "https://img.freepik.com/free-photo/shirtless-man-flipping-heavy-tire_136403-904.jpg?w=740",
-    "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
+    "details": "CrossFit certificate courses are open to individuals and trainers at all stages of development. CrossFit’s world-class education and training includes entry-level courses such as the Level 1 Certificate Course, intermediate-level courses such as the Level 2 Certificate Course, and age-specific courses such as the CrossFit Kids Certificate Course."
   },
   {
+    "id": "3",
     "name": "Cardio",
     "price": "100",
     "image": "https://img.freepik.com/free-photo/mature-man-presses-hands-heart-has-cardio-problems-suffers-heart-attack-chest-pain-stands-with-closed-eyes-needs-doctors-help-wears-casual-jumper-isolated-brown-wall_273609-44150.jpg?t=st=1650187831~exp=1650188431~hmac=988186fc44d6e57588ddc909b0f861a6c6c89a73fa2d344d2a72a8c5772843a6&w=740",
-    "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
+    "details": "This step-by-step guide can help you take the leap and get back to cardio. The best exercise for you is the one you'll actually do, not the one you think you should do. Walking is a great place to start since it doesn't require special equipment and you can do it anywhere."
   },
   {
+    "id": "4",
     "name": "Strength",
     "price": "40",
     "image": "https://img.freepik.com/free-photo/brutal-strong-bodybuilder-athletic-men-pumping-up-muscles-with-dumbbells_174475-671.jpg?w=740",
-    "details": "i provide kickboxing services . kickboxing mens . Kickboxing is a group of stand-up combat sports and a form of boxing based on kicking and punching"
+    "details": "Strength training or resistance training involves the performance of physical exercises that are designed to improve strength and endurance. It is often associated with the lifting of weights. It can also incorporate a variety of training techniques such as calisthenics, isometrics, and plyometrics"
   }
 ]

@@ -30,11 +30,11 @@ const Header = () => {
           <ul className="flex items-center gap-8 uppercase tracking-widest font-bold text-md mr-5">
             <li>
               
-              <NavLink to="/">Home</NavLink>
+              <NavLink className={({isActive})=> isActive ? 'text-tomato_light' : ''} to="/">Home</NavLink>
             </li>
             <li>
               
-              <NavLink to="/about">About Me</NavLink>
+              <NavLink className={({isActive})=> isActive ? 'text-tomato_light' : ''} to="/about">About Me</NavLink>
             </li>
             {/* <li>
               
@@ -42,11 +42,11 @@ const Header = () => {
             </li> */}
             <li>
               
-              <NavLink to="/blog">Blog </NavLink>
+              <NavLink className={({isActive})=> isActive ? 'text-tomato_light' : ''} to="/blog">Blog </NavLink>
             </li>
           </ul>
           <div className="">
-            <NavLink onClick={ username ? handleLogOut : null} to="/register/login" className="border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2">
+            <NavLink className={({isActive})=> isActive ? 'text-tomato_light border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2' : 'border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2'} onClick={ username ? handleLogOut : null} to="/register/login" >
               {username ? "SignOut" : "Login"}
             </NavLink>
             <span className="bg-blue_light  duration-100    text-white px-3 py-3 rounded-md fond-bold tracking-wider">

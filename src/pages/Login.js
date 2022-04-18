@@ -42,7 +42,7 @@ const Login = () => {
           <p className="text-red-500 text-sm text-center font-medium">{error}</p>
           <label
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="email"
+            
           >
             Email
           </label>
@@ -57,7 +57,7 @@ const Login = () => {
           />
           <label
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="password"
+           
           >
             Password
           </label>
@@ -92,7 +92,7 @@ const Login = () => {
           )}
           <label
             className={agree ? "text-green-300 text-sm" : "text-white text-sm"}
-            htmlFor="checked"
+            
           >
             Agree To Continue
           </label>

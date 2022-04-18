@@ -13,7 +13,8 @@ const Footer = () => {
                     <SiConsul className='mr-3 text-green_light text-3xl' />
                     Phase
                 </span>
-                <p className='text-sm mb-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <p className='text-sm mb-3'>in here i well help you to shape and build your ideal
+body and live up your life to the fullest</p>
                 <div className='flex gap-5 text-green_light text-lg'>
                     <span><FaFacebookF /></span>
                     <span><AiOutlineTwitter /></span>
