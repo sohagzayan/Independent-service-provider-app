@@ -1,9 +1,14 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import React from "react";
 import { NavLink } from "react-router-dom";
+AOS.init()
 const Card = ({ item }) => {
   const { name, price, image, details, id } = item;
   return (
-    <div className="flex card rounded-lg  flex-col items-center text-center bg-dark_gray ">
+    <div
+
+    className="flex card rounded-lg  flex-col items-center text-center bg-dark_gray ">
       <img className="rounded-lg cardImage" src={image} alt="" />
       <div className="p-3 text-left flex flex-col justify-between h-full">
         <div>

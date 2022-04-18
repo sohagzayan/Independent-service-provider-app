@@ -1,14 +1,21 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import React from 'react';
 import { AiOutlineFieldTime, AiOutlineMail, AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 import { FaFacebookF, FaPhoneAlt } from 'react-icons/fa';
 import { MdLocationOn } from "react-icons/md";
 import { SiConsul } from "react-icons/si";
-
+AOS.init()
 const Footer = () => {
     return (
        <div className=' footer shadow-2xl'>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container px-4 mx-auto'>
-            <div className='lg:mr-2 lg:mb-0 mb-7'>
+            <div
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="2000"
+            className='lg:mr-2 lg:mb-0 mb-7'>
                 <span className='flex items-center text-2xl font-bold tracking-widest mb-3'>
                     <SiConsul className='mr-3 text-green_light text-3xl' />
                     Phase
@@ -21,7 +28,12 @@ body and live up your life to the fullest</p>
                     <span><AiOutlineYoutube /></span>
                 </div>
             </div>
-            <div className=' lg:mb-0 mb-7'>
+            <div
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="2000"
+            className=' lg:mb-0 mb-7'>
                 <h3 className='text-xl tracking-widest text-green_light mb-3 '>Navigations</h3>
                 <ul className='text-sm'>
                     <li><a href="/">FAQ's</a></li>
@@ -30,7 +42,12 @@ body and live up your life to the fullest</p>
                     <li><a href="/">Contact</a></li>
                 </ul>
             </div>
-            <div className=' lg:mb-0 mb-7'>
+            <div 
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="2000"
+            className=' lg:mb-0 mb-7'>
                 <h3 className='text-xl tracking-widest text-green_light mb-3'>Contact Information</h3>
                 <span className='flex items-center mb-1 text-sm'>
                     <MdLocationOn  className='mr-2' />
@@ -45,7 +62,12 @@ body and live up your life to the fullest</p>
                     info@yogado.com
                 </span>
             </div>
-            <div className=' lg:mb-0 mb-7'>
+            <div
+             data-aos="fade-up"
+             data-aos-offset="200"
+             data-aos-delay="50"
+             data-aos-duration="2000"
+            className=' lg:mb-0 mb-7'>
                 <h3 className='text-xl tracking-widest text-green_light mb-3'>Opineing Time</h3>
                 <span className='flex items-center mb-1 text-sm'>
                     <AiOutlineFieldTime className='mr-2' />
@@ -61,8 +83,12 @@ body and live up your life to the fullest</p>
                 </span>
             </div>
         </div>
-        <div className='container mx-auto py-7'>
-        <hr className="border-green_light" />
+        <div
+        
+        className='container mx-auto py-7'>
+        <hr
+         
+        className="border-green_light" />
         </div>
         <p className='text-sm text-center'>Copyright © 2022 PrimGym | Powered by PrimGym</p>
        </div>
