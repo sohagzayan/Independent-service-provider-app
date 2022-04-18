@@ -24,7 +24,7 @@ const Login = () => {
           await sinUp(email, password, name);
           varyFayEmail()
           alert("verification mail send conform Please ! ")
-          navigate("/checkOut");
+        navigate('/CheckOut')
         } catch (err) {
           setError(err.message);
         }

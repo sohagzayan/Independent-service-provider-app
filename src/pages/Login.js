@@ -27,7 +27,7 @@ const Login = () => {
     const handleGoogleSignIn = async ()=>{
       try{
         await googleLogin()
-        navigate('/')
+        navigate('/CheckOut')
       }catch(err){
         setError(err.message)
       }
