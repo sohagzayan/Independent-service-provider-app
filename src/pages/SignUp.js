@@ -102,7 +102,6 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             name={password}
-            autoComplete="on"
             id="password"
             className="w-full outline-none border-0 font-bold text-white px-2 rounded-md py-1"
             style={{ background: "#545E6A" }}
@@ -121,7 +120,6 @@ const Login = () => {
             onChange={(e) => setConformPassword(e.target.value)}
             value={conformPassword}
             name={conformPassword}
-            autoComplete="on"
             id="password"
             className="w-full outline-none border-0 font-bold text-white px-2 rounded-md py-1"
             style={{ background: "#545E6A" }}
