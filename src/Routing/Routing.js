@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "../pages/About";
 import CheckOut from '../pages/CheckOut';
+import ForGotPassword from "../pages/ForGotPassword";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
@@ -17,6 +18,7 @@ const Routing = () => {
       <Route path="/register" element={<LoginSignUpSwicer />}>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="forgotPassword" element={<ForGotPassword />} />
       </Route>
     </Routes>
   );

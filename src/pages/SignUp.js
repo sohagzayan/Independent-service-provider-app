@@ -2,48 +2,50 @@ import React, { useState } from "react";
 import GoogleButton from "react-google-button";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContextProvider";
+
 const Login = () => {
-  const { sinUp ,googleLogin } = useAuthContext();
+  const { sinUp, googleLogin } = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [conformPassword, setConformPassword] = useState("");
   const [name, setName] = useState("");
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+ 
 
 
-
-
-  
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    if(password === conformPassword){
+    e.preventDefault();
+    if (password === conformPassword) {
       try {
+        
         await sinUp(email, password, name);
-          navigate('/register/login')
-    
+        navigate("/register/login");
       } catch (err) {
         setError(err.message);
       }
-    }else{
-      setError("your password and conform Password not mach")
-      setAgree(false)
+    } else {
+      setError("your password and conform Password not mach");
+      setAgree(false);
     }
-
   };
 
   const handleGoogleSignIn = async () => {
-    try{
-      await googleLogin()
-      navigate("/checkOut")
-    }catch(err){
-      setError(err.message)
+  
+    try {
+     
+      await googleLogin();
+      navigate("/checkOut");
+      
+    } catch (err) {
+      setError(err.message);
     }
   };
 
   return (
     <>
+
       <div className="login mx-auto mt-6">
         <form className="" onSubmit={handleSubmit}>
           <p className="text-red-500 text-sm text-center font-medium">
@@ -80,6 +82,7 @@ const Login = () => {
             placeholder="Email"
           />
           <label
+          
             className="text-sm mb-4 text-white tracking-wider"
             htmlFor="password"
           >
@@ -147,7 +150,7 @@ const Login = () => {
           >
             signup
           </button>
-          <p className="text-center my-2 text-white text-sm">Or login with</p>
+          <p className="text-center my-2 text-white text-sm">Or SignUp with</p>
         </form>
         <div className="flex justify-between my-4">
           <GoogleButton
@@ -157,17 +160,8 @@ const Login = () => {
             style={{ width: "100%", textAlign: "center" }}
           />
         </div>
-
         <p className="text-center text-white">
-          <NavLink
-            className="text-green-400 font-bold uppercase"
-            to="/register/forgot-password"
-          >
-            Forgot Password
-          </NavLink>
-        </p>
-        <p className="text-center text-white">
-          Not Member
+          Already Account ?
           <NavLink
             className="text-green-400 font-bold mx-2 uppercase"
             to="/register/login"

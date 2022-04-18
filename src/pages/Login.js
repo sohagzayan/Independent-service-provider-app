@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import GoogleButton from 'react-google-button';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useAuthContext } from '../context/AuthContextProvider';
 
 const Login = () => {
@@ -10,13 +12,15 @@ const Login = () => {
     const [agree , setAgree] = useState(false)
     const [error , setError] = useState('')
     const navigate = useNavigate()
+    const notify = () => toast("Login SuccessFully Completed year ❤");
 
-
+  
 
     const handleSubmit = async(e)=>{
       e.preventDefault()
       try{
         await login(email , password)
+        notify()
         navigate('/CheckOut')
       }catch(err){
         setError(err.message)
@@ -36,6 +40,8 @@ const Login = () => {
 
     return (
         <>
+        <ToastContainer position="top-right"
+         autoClose={1000} />
       <div className='login mx-auto mt-6'>
       <form className='' onSubmit={handleSubmit}>
           <p className="text-red-500 text-sm text-center font-medium">{error}</p>
@@ -103,7 +109,7 @@ const Login = () => {
             }
             style={{ background: "#0CC486" }}
           >
-            signup
+            Login
           </button>
           <p className="text-center my-2 text-white text-sm">Or login with</p>
         </form>
@@ -120,17 +126,17 @@ const Login = () => {
         <p className="text-center text-white">
    
           <NavLink
-            className="text-green-400 font-bold uppercase"
-            to="/register/forgot-password"
+            className="text-green-400  font-bold uppercase"
+            to="/register/forgotPassword"
           >
     
             Forgot Password
           </NavLink>
         </p>
         <p className="text-center text-white">
-          Not Member
+            Don't have a Account ?
           <NavLink
-            className="text-green-400 font-bold uppercase"
+            className="text-green-400 mx-3 font-bold uppercase"
             to="/register/signup"
           >
              SignUp

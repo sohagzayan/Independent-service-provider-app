@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '../fairbase.auth';
 console.log(auth);
@@ -34,6 +34,11 @@ const authContext = createContext()
         await signInWithPopup(auth ,loginFacebook)
     }
 
+
+    const ForGotPassWord = async (email)=>{
+        await sendPasswordResetEmail(auth ,email)
+    }
+
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth , (user)=> {
             setUsername(user)
@@ -45,7 +50,7 @@ const authContext = createContext()
 
 
     return (
-        <authContext.Provider value={{sinUp , login , logOut , username , googleLogin}}>
+        <authContext.Provider value={{sinUp , login , logOut , username , googleLogin ,ForGotPassWord}}>
             {children}
         </authContext.Provider>
     );
