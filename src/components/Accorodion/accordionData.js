@@ -2,16 +2,16 @@ export const faqs = [
     {
       question: "Difference between authorization and authentication ?",
       answer:
-        "Context Api প্রতিটি স্তরে ম্যানুয়ালি প্রপস ডাউন না করেই উপাদান ট্রির মাধ্যমে ডেটা পাস করার একটি উপায় সরবরাহ করে। একটি সাধারণ রিঅ্যাক্ট অ্যাপ্লিকেশনে, প্রপসের মাধ্যমে ডেটা টপ-ডাউন  পাস করা হয়, কিন্তু এই ধরনের ব্যবহার নির্দিষ্ট ধরনের প্রপসের জন্য কষ্টকর হতে পারে । Context api অ্যাপ্লিকেশনে প্রতিটি স্তরের মধ্য দিয়ে স্পষ্টভাবে একটি প্রপ পাস না করে উপাদানগুলির মধ্যে এই জাতীয় মানগুলি ভাগ করার একটি উপায় সরবরাহ করে। Context API আমাদের prop drilling থেকে দূরে রাখে । এর মাধ্যমে আমারা যেকনো data যেকনো child এর কাছে পাঠাতে পারি । সুতরাং বলা যায় আমাদের যদি এমন কোন state , data ইত্যাদি মা আমাদের সোকল application এর page এ প্রয়োজন হয় তাহলে context API আমাদের সাহায্য করবে । etc",
+        "Authentication means to confirm your own identity, while authorization means to grant access to the system. In simple terms, authentication verifies who you are, while authorization verifies what you have access to. 1/Authentication for User identity is confirmed . 2/ Authentication User and user server is verified 3/ Authentication Login details, usernames, passwords, OTPs required . And 1/ Authorization Here, the user is given permission to access the system . 2/ Authorization Here it is validated if the user is allowed to access via some defined rules. 3/ Authorization Checks the security level and privilege of the user, thus determining what the user can or cannot have access to etc",
     },
     {
       question: "Why are you using firebase? What other options do you have to implement authentication ?",
       answer:
-        "একটি Semantic Element হলো কোড এর একটি উপাদান যা সেই উপাদানটির ভিতরে কি রয়েছে তা ইস্পষ্ট ভাবে উপস্থাপন করতে শব্দ ব্যবহার করা হয় মানুষের ভাষায় । HTML এ কিছু Semantic Element হলো article , detail , figure , footer , header , main etc .",
+        "Firebase is Google’s app development platform. It will help you to build, improve, and grow your application in a smooth and standardized way . The platform works well for mobile and web applications, and it is designed to increase the general productivity of creating digital products. The core features of Firebase include NoSQL databases, real-time queries, scalable hosting, file storage, REST APIs, authentication, and analytics. thats way we are using fairbase and many rejone . Firebase Alternatives have many many best Alternatives 1/ Back4App 2/ Parse 3/AWS Amplify 4/Backendless etc fairbase Alternatives",
     },
     {
       question: "What other services does firebase provide other than authentication ?",
       answer:
-        "দুটি display value আছে: ব্লক এবং ইনলাইন |একটি lock-level element সর্বদা একটি নতুন লাইনে শুরু হয় এবং browsers automatically উপাদানের আগে এবং পরে কিছু space or একটি মার্জিন যোগ করে। একটি ব্লক-স্তরের উপাদান সর্বদা  takes up the full width ,যতদূর সম্ভব বাম এবং ডানদিকে প্রসারিত হয় exjampole , <p> , <div> | একটি inline element একটি নতুন লাইন শুরু হয় না. একটি ইনলাইন উপাদান শুধুমাত্র প্রয়োজনীয় যতটা space  নেয়। exjample , span , button, a",
+        "Firebase is Google’s mobile application development platform that helps you build, improve, and grow your app . Easily integrate Firebase into your team's favorite tools. Trusted by the largest apps. Firebase helps teams from startups to global enterprises build & run successful apps. Monitor App Performance. anyway ! I count 17 individual products in the Firebase suite. 1/Auth 2/Cloud Function 3/Cloud FiresStore 4/Cloud Storage 5/Hosting, 6/Real Time DataBase, 7/Analytis etc . fairbase provide almost 16+ serives.",
     },
   ];
