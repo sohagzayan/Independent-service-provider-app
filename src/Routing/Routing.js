@@ -17,8 +17,9 @@ const Routing = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
+      {/* <Route path="/CheckOut" element={<PrivateRoute><CheckOut /></PrivateRoute>} /> */}
       <Route path="/CheckOut" element={<PrivateRoute><CheckOut /></PrivateRoute>} />
-      <Route path="/CheckOut" element={<PrivateRoute><CheckOut /></PrivateRoute>} />
+      <Route path="/CheckOut/:id" element={<PrivateRoute><CheckOut /></PrivateRoute>} />
       <Route path="/register" element={<LoginSignUpSwicer />}>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />

@@ -7,7 +7,7 @@ const Blog = () => {
     return (
         <>
         <Header />
-            <div className='my-24 '>
+            <div className='my-24 px-4'>
                 <Accordion />
             </div>
         <Footer />

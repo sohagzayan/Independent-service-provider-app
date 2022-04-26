@@ -48,9 +48,7 @@ const Hero = () => {
 
             <div className='heroImage mt-10 md:mt-0'>
                 <img
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="400"
+              
                 width={300} src={image} alt="images" />
             </div>
    

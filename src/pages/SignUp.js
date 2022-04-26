@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import GoogleButton from "react-google-button";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContextProvider";
 
 const Login = () => {
-  const { sinUp, googleLogin ,varyFayEmail} = useAuthContext();
+  const { sinUp, googleLogin, varyFayEmail ,confirmEmailVerified} = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [conformPassword, setConformPassword] = useState("");
@@ -12,19 +12,18 @@ const Login = () => {
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
- 
-
+  const location = useLocation()
+  const from = location.state?.from?.pathname || '/';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(name){
+    if (name) {
       if (password === conformPassword) {
         try {
-          
           await sinUp(email, password, name);
-          varyFayEmail()
-          alert("verification mail send conform Please ! ")
-        navigate('/CheckOut')
+          varyFayEmail();
+          alert("verification mail send conform Please ! ");
+          navigate("/register/login" , {replace : true});
         } catch (err) {
           setError(err.message);
         }
@@ -32,18 +31,15 @@ const Login = () => {
         setError("your password and conform Password not mach");
         setAgree(false);
       }
-    }else{
-      setError('Please add Your user name Must!')
+    } else {
+      setError("Please add Your user name Must!");
     }
   };
 
   const handleGoogleSignIn = async () => {
-  
     try {
-     
       await googleLogin();
-      navigate("/checkOut");
-      
+      navigate(from , {replace : true});
     } catch (err) {
       setError(err.message);
     }
@@ -51,18 +47,12 @@ const Login = () => {
 
   return (
     <>
-
       <div className="login mx-auto mt-6">
         <form className="" onSubmit={handleSubmit}>
           <p className="text-red-500 text-sm text-center font-medium">
             {error}
           </p>
-          <label
-            className="text-sm mb-4 text-white tracking-wider"
-           
-          >
-            Name
-          </label>
+          <label className="text-sm mb-4 text-white tracking-wider">Name</label>
           <input
             onChange={(e) => setName(e.target.value)}
             value={name}
@@ -72,12 +62,8 @@ const Login = () => {
             type="text"
             placeholder="Name"
             required
-
           />
-          <label
-            className="text-sm mb-4 text-white tracking-wider"
-            
-          >
+          <label className="text-sm mb-4 text-white tracking-wider">
             Email
           </label>
           <input
@@ -89,13 +75,8 @@ const Login = () => {
             type="email"
             placeholder="Email"
             required
-
           />
-          <label
-          
-            className="text-sm mb-4 text-white tracking-wider"
-           
-          >
+          <label className="text-sm mb-4 text-white tracking-wider">
             Password
           </label>
           <input
@@ -108,12 +89,8 @@ const Login = () => {
             type="password"
             placeholder="Password"
             required
-
           />
-          <label
-            className="text-sm mb-4 text-white tracking-wider"
-            
-          >
+          <label className="text-sm mb-4 text-white tracking-wider">
             Conform password
           </label>
           <input
@@ -126,7 +103,6 @@ const Login = () => {
             type="password"
             placeholder="Conform password"
             required
-
           />
           {agree ? (
             <input
@@ -137,7 +113,6 @@ const Login = () => {
               name="checkbox"
               id="checked"
               required
-
             />
           ) : (
             <input
@@ -147,12 +122,11 @@ const Login = () => {
               name="checkbox"
               id="checked"
               required
-
             />
           )}
           <label
             className={agree ? "text-green-300 text-sm" : "text-white text-sm"}
-           for="checked"
+            for="checked"
           >
             Agree To Continue
           </label>

@@ -1,13 +1,13 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '../fairbase.auth';
-console.log(auth);
 const authContext = createContext()
 
  export const AuthContextProvider = ({children}) => {
 
     const [username , setUsername] = useState('')
-
+    const [loading , setLoading] = useState(true)
+    console.log(username);
 
 
     const sinUp = async(email , password , userdisplayname)=>{
@@ -21,6 +21,15 @@ const authContext = createContext()
             ...user
         })
     }
+    useEffect(()=>{
+        const unSubscribe = onAuthStateChanged(auth ,(user)=> {
+            setUsername(user)
+            setLoading(false)
+            
+        })
+        return unSubscribe
+    },[])
+    
 
     const login = async(email , password)=>{
         await signInWithEmailAndPassword(auth , email , password)
@@ -42,18 +51,12 @@ const authContext = createContext()
         await sendPasswordResetEmail(auth ,email)
     }
 
-    useEffect(()=>{
-        const unSubscribe = onAuthStateChanged(auth , (user)=> {
-            setUsername(user)
-        })
-        return unSubscribe
-    },[])
 
 
 
 
     return (
-        <authContext.Provider value={{sinUp , login , logOut , username , googleLogin ,ForGotPassWord , varyFayEmail}}>
+        <authContext.Provider value={{sinUp , login , loading, logOut , username , googleLogin ,ForGotPassWord , varyFayEmail}}>
             {children}
         </authContext.Provider>
     );

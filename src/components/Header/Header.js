@@ -20,10 +20,7 @@ const Header = () => {
   return (
     <div className="flex justify-between container mx-auto py-6 px-4">
       <NavLink
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="2000"
+      
         
       to="/" className="flex items-center">
         <span className="mr-3 text-3xl">
@@ -37,43 +34,29 @@ const Header = () => {
         <div className="flex items-center ">
           <ul className="flex items-center gap-8 uppercase tracking-widest font-bold text-md mr-5">
             <li
-             data-aos="fade-down"
-             data-aos-offset="200"
-             data-aos-delay="50"
-             data-aos-duration="1000"
+        
             >
               
               <NavLink className={({isActive})=> isActive ? 'text-tomato_light' : ''} to="/">Home</NavLink>
             </li>
             <li
-             data-aos="fade-down"
-             data-aos-offset="200"
-             data-aos-delay="50"
-             data-aos-duration="2000"
+        
             >
               
               <NavLink className={({isActive})=> isActive ? 'text-tomato_light' : ''} to="/about">About Me</NavLink>
             </li>
-            {/* <li>
-              
-              <NavLink to="/">Checkout </NavLink>
-            </li> */}
+         
             <li
-             data-aos="fade-down"
-             data-aos-offset="200"
-             data-aos-delay="50"
-             data-aos-duration="3000"
+            
             >
               
               <NavLink className={({isActive})=> isActive ? 'text-tomato_light' : ''} to="/blog">Blog </NavLink>
             </li>
           </ul>
           <div
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="2000"
-          className="">
+          className=""
+         
+          >
             <NavLink
              
             className={({isActive})=> isActive ? 'text-tomato_light border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2' : 'border-2 hover:bg-blue_light duration-100 cursor-pointer border-blue_light px-7 rounded-md mr-4 py-2'} onClick={ username ? handleLogOut : null} to="/register/login" >

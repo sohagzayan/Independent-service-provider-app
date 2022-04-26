@@ -1,9 +1,12 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 AOS.init()
 const Card = ({ item }) => {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   const { name, price, image, details, id } = item;
   return (
     <div
@@ -23,12 +26,12 @@ const Card = ({ item }) => {
             {price}
           </span>
 
-          <NavLink
-            to="/checkOut"
+          <button
+            onClick={()=> navigate("/checkOut")}
             className="bg-tomato_light text-center text-white_light  checkOut block w-full px-4 py-1 rounded-md font-bold tracking-widest my-3"
           >
-            CheckOut{" "}
-          </NavLink>
+            CheckOut
+          </button>
         </div>
       </div>
     </div>

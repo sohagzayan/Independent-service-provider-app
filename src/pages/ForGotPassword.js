@@ -35,7 +35,7 @@ const ForGotPassword = () => {
         <form className="" onSubmit={handleSubmit}>
           <label
             className="text-sm mb-4 text-white tracking-wider"
-            htmlFor="email"
+            
           >
             Email
           </label>

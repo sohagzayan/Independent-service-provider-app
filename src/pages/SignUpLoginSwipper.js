@@ -1,17 +1,10 @@
 import React from 'react';
-import { Navigate, NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
-import { useAuthContext } from '../context/AuthContextProvider';
 const LoginSignUpSwicer = () => {
-  const {username} = useAuthContext()
-  if(username){
-    return <Navigate to="/checkOut" />
-  }
-
-
-
+ 
     return (
         <>
         <Header />

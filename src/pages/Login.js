@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import GoogleButton from 'react-google-button';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContextProvider';
 
 const Login = () => {
@@ -10,14 +10,15 @@ const Login = () => {
     const [agree , setAgree] = useState(false)
     const [error , setError] = useState('')
     const navigate = useNavigate()
-
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
   
-
+  console.log(location);
     const handleSubmit = async(e)=>{
       e.preventDefault()
       try{
         await login(email , password)
-        navigate('/CheckOut')
+        navigate(from , {replace : true})
       }catch(err){
         setError(err.message)
         setAgree(false)
@@ -27,7 +28,7 @@ const Login = () => {
     const handleGoogleSignIn = async ()=>{
       try{
         await googleLogin()
-        navigate('/CheckOut')
+        navigate(from , {replace : true})
       }catch(err){
         setError(err.message)
       }

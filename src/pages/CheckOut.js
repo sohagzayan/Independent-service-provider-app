@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/Header/Header";
-
+import Loading from "../components/Loading/Loading";
+import { useAuthContext } from '../context/AuthContextProvider';
+import useLoadData from "../hocks/useLoadData";
 const ChackOut = () => {
   const [showBox, setShowBox] = useState(true);
+  const {data} = useLoadData()
   const notify = () => toast("Success Fully Send Your Details! 💚");
+  const [datas , setDatas] = useState([])
+  const {loading} = useAuthContext()
+
+
+  if(loading){
+    return <Loading />
+  }
+  
+
 
   const handleDetails = (e) => {
     e.preventDefault();
